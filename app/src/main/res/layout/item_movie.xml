@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="v"
+            type="com.example.videoplayer.models.Video" />
+        <variable
+            name="index"
+            type="int" />
+    </data>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        app:surface_type="texture_view"
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        app:url = "@{v.location}"
+        app:index="@{index}"
+        android:layout_height="match_parent"
+        android:background="#000"
+        app:resize_mode="fit" />
+</layout>
